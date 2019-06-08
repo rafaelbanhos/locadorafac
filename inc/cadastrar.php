@@ -33,7 +33,7 @@ if($rows>=1){
     echo '</script>';
 } else {
     try {
-        $stmt = $pdo->prepare('INSERT INTO tb_usuario VALUES(null,:perfil,:cpf,:nome,:login,:email,:senha,null,null,null,null,null,null,:data,:status)');
+        $stmt = $pdo->prepare('INSERT INTO tb_usuario (login,senha,nome,email,perfil,cpf,data,status) VALUES(:login,:senha,:nome,:email,:perfil,:cpf,:data,:status)');
         $stmt->execute(array(
         ':login' => $login,
         ':senha' => $senha,

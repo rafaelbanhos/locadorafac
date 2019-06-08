@@ -28,7 +28,7 @@ session_start();
             </div>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="nav-link" href="cadastro.html">Cadastrar <span class="sr-only"></span></a>
+                    <a class="nav-link" href="cadastro.php">Cadastrar <span class="sr-only"></span></a>
                 </li>
             </ul>
         </div>
