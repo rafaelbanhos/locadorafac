@@ -18,7 +18,7 @@ $lista = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </head>
 
 <body>
-<body>
+
     <div class="container-fluid">
         <!-- Page Heading -->
         <div class="row">
@@ -70,7 +70,7 @@ $lista = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </div>
         </div>                    
     </div>
-</body>
+
 </body>
 
 </html>

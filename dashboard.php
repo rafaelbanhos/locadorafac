@@ -11,6 +11,7 @@ $stmt = $pdo->prepare("SELECT * FROM tb_usuario WHERE id_usuario=:id_usuario");
 $stmt->execute(['id_usuario' => $_SESSION['id_usuario']]); 
 $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -21,7 +22,7 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
     <title>Página Principal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
        
-    
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <!------ Include the above in your HEAD tag ---------->
@@ -68,11 +69,7 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
             </div>
           </nav>
     
-          <div class="container-fluid">
-            <h1 class="mt-4">Página em construção</h1>
-            <p>Locadora RMGD. Em construção.</p>
-            <p>Desculpe o incômodo, voltaremos em breve!</p>
-          </div>
+          
         </div>
         <!-- /#page-content-wrapper -->
     
