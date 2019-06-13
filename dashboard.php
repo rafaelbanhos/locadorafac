@@ -40,9 +40,9 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
           <div class="sidebar-heading">Olá, <?php echo $_SESSION['nome'] ?> <a href="inc/logout.php"><i class="fa fa-times-circle-o fa-lg"></a></i></div>
           <div class="list-group list-group-flush">
             <a href="usuarios.php" class="list-group-item list-group-item-action bg-light">Usuários</a>            
-            <a href="#" class="list-group-item list-group-item-action bg-light">Veiculos</a>            
-            <a href="#" class="list-group-item list-group-item-action bg-light">Teste 1</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Teste 2</a>
+            <a href="veiculos.php" class="list-group-item list-group-item-action bg-light">Veículos</a>            
+            <a href="#" class="list-group-item list-group-item-action bg-light">Teste</a>
+            <a href="#" class="list-group-item list-group-item-action bg-light">Relatórios</a>
           </div>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -69,7 +69,11 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
             </div>
           </nav>
     
-          
+          <div class="container-fluid" id="conteudo">
+            <h1 class="mt-4">Página em construção</h1>
+            <p>Locadora RMGD. Em construção.</p>
+            <p>Desculpe o incômodo, voltaremos em breve!</p>
+          </div>
         </div>
         <!-- /#page-content-wrapper -->
     

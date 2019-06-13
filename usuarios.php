@@ -39,8 +39,8 @@ $lista = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <th>CPF</th>
                         <th>Perfil</th>
                         <th>Email</th>
-                        <th>Endereço</th>
                         <th>Status</th>
+                        <th>Alterar/Apagar</th>
                         <th></th>
                     </tr>
                     </thead>
