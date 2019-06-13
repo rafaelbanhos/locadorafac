@@ -19,9 +19,7 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Página Principal</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-   
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
        
     
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -40,10 +38,8 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
         <div class="bg-light border-right" id="sidebar-wrapper">
           <div class="sidebar-heading">Olá, <?php echo $_SESSION['nome'] ?> <a href="inc/logout.php"><i class="fa fa-times-circle-o fa-lg"></a></i></div>
           <div class="list-group list-group-flush">
-            <a href="usuarios.php" class="list-group-item list-group-item-action bg-light">Clientes</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Alterar Cliente</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Cadastrar Veiculo</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Lista Veiculos</a>
+            <a href="usuarios.php" class="list-group-item list-group-item-action bg-light">Usuários</a>            
+            <a href="#" class="list-group-item list-group-item-action bg-light">Veiculos</a>            
             <a href="#" class="list-group-item list-group-item-action bg-light">Teste 1</a>
             <a href="#" class="list-group-item list-group-item-action bg-light">Teste 2</a>
           </div>
