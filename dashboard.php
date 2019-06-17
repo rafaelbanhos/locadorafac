@@ -39,8 +39,8 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
         <div class="bg-light border-right" id="sidebar-wrapper">
           <div class="sidebar-heading">Olá, <?php echo $_SESSION['nome'] ?> <a href="inc/logout.php"><i class="fa fa-times-circle-o fa-lg"></a></i></div>
           <div class="list-group list-group-flush">
-            <a href="usuarios.php" class="list-group-item list-group-item-action bg-light">Usuários</a>            
-            <a href="veiculos.php" class="list-group-item list-group-item-action bg-light">Veículos</a>            
+            <a href="http://localhost/locadora/dashboard.php?p=usuarios.php" class="list-group-item list-group-item-action bg-light">Usuários</a>            
+            <a href="http://localhost/locadora/dashboard.php?p=veiculos.php" class="list-group-item list-group-item-action bg-light">Veículos</a>            
             <a href="#" class="list-group-item list-group-item-action bg-light">Teste</a>
             <a href="#" class="list-group-item list-group-item-action bg-light">Relatórios</a>
           </div>
@@ -70,9 +70,21 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
           </nav>
     
           <div class="container-fluid" id="conteudo">
-            <h1 class="mt-4">Página em construção</h1>
+            <!--<h1 class="mt-4">Página em construção</h1>
             <p>Locadora RMGD. Em construção.</p>
             <p>Desculpe o incômodo, voltaremos em breve!</p>
+--><?php if (isset($_GET['p'])) {
+          include($_GET['p']); 
+        } else {
+          echo "<h1 class='mt-4'>Página em construção</h1>
+          <p>Locadora RMGD. Em construção.</p>
+          <p>Desculpe o incômodo, voltaremos em breve!</p>";
+        }
+        ?>
+
+
+
+
           </div>
         </div>
         <!-- /#page-content-wrapper -->

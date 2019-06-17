@@ -1,6 +1,6 @@
 <?php
-include('dashboard.php');
-require_once("inc/conexao.php");
+//include('dashboard.php');
+//require_once("inc/conexao.php");
 
 $pdo = Database::conexao();
 $stmt = $pdo->prepare("SELECT * FROM tb_usuario");

@@ -1,5 +1,5 @@
 <?php 
-include('dashboard.php');
+//include('dashboard.php');
 require_once("inc/conexao.php");
 
 $pdo=Database::conexao();
