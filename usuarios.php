@@ -1,6 +1,6 @@
 <?php
 //include('dashboard.php');
-//require_once("inc/conexao.php");
+require_once("inc/conexao.php");
 
 $pdo = Database::conexao();
 $stmt = $pdo->prepare("SELECT * FROM tb_usuario");
@@ -68,7 +68,7 @@ $lista = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
     <div class="row">
         <div class=" col-md-3 col-sm-12 col-md-offset-3">
-            <a href="usuario-criar.php" class="btn btn-info btn-block" id="insert">Cadastrar Usuário</a>
+            <a href="http://localhost/locadora/dashboard.php?p=usuario-criar.php" class="btn btn-info btn-block" id="insert">Cadastrar Usuário</a>
         </div>
     </div>
     </div>

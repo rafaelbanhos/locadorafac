@@ -43,7 +43,7 @@ if($rows>=1){
         ));
 
         $mensagem = 'Veiculo cadastrado com sucesso!';
-        $location = '../veiculos.php';
+        $location = 'http://localhost/locadora/dashboard.php?p=veiculos.php';
 
         // criar e exibir o javascript
         echo '<script>';

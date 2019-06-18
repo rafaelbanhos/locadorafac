@@ -1,5 +1,5 @@
 <?php 
-include('dashboard.php');
+//include('dashboard.php');
 ?>
 
 <!DOCTYPE html>
@@ -83,7 +83,7 @@ include('dashboard.php');
                         </div>
                         <div class="col-md-4 botao">
                             <label></label>
-                            <a href="veiculos.php" role="button" class="btn btn-warning btn-block">Cancelar</a>
+                            <a href="http://localhost/locadora/dashboard.php?p=veiculos.php" role="button" class="btn btn-warning btn-block">Cancelar</a>
                         </div>
                     </div>
                 </form>

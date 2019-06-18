@@ -8,7 +8,7 @@ try{
     $stmt->execute();
 
     $mensagem = 'Usuário excluido com sucesso!';
-    $location = '../usuarios.php';
+    $location = 'http://localhost/locadora/dashboard.php?p=usuarios.php';
 
     // criar e exibir o javascript
     echo '<script>';

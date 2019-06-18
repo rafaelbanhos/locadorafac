@@ -95,7 +95,6 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
   <!-- /#wrapper -->
 
 
-
   <!-- Menu Toggle Script -->
   <script>
     $("#menu-toggle").click(function(e) {

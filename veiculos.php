@@ -69,7 +69,7 @@ $lista = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
     <div class="row">
         <div class=" col-md-3 col-sm-12 col-md-offset-4">
-            <a href="veiculo-criar.php" class="btn btn-info btn-block" id="insert">Cadastrar Veiculo</a>
+            <a href="http://localhost/locadora/dashboard.php?p=veiculo-criar.php" class="btn btn-info btn-block" id="insert">Cadastrar Veiculo</a>
         </div>
     </div>
     </div>

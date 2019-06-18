@@ -45,7 +45,7 @@ if($rows>=1){
         ));
 
         $mensagem = 'Usuário cadastrado com sucesso!';
-        $location = '../usuarios.php';
+        $location = 'http://localhost/locadora/dashboard.php?p=usuarios.php';
 
         // criar e exibir o javascript
         echo '<script>';
