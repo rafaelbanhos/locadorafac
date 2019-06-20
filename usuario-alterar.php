@@ -48,7 +48,7 @@ $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
                         <div class="col-md-5 col-sm-12">
                             <div>
                                 <label>Senha:</label>
-                                <input type="password" name="senha" class="form-control" required/>
+                                <input type="password" name="senha" value="<?php echo $usuario['senha']; ?>" class="form-control" required/>
                             </div>
                         </div>
                     </div>
@@ -56,19 +56,19 @@ $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
                         <div class="col-md-4 col-sm-12 col-md-offset-1">
                             <div>
                                 <label>Nome:</label>
-                                <input type="text" name="nome" class="form-control" required/>
+                                <input type="text" name="nome" value="<?php echo $usuario['nome']; ?>" class="form-control" required/>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-12">
                             <div>
                                 <label>CPF:</label>
-                                <input type="text" name="cpf" id="cpf" class="form-control" required/>
+                                <input type="text" name="cpf" value="<?php echo $usuario['cpf']; ?>" id="cpf" class="form-control" required/>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-12">
                             <div>
                                 <label>Email:</label>
-                                <input type="email" name="email" class="form-control" required/>
+                                <input type="email" name="email" value="<?php echo $usuario['email']; ?>" class="form-control" required/>
                             </div>
                         </div>
                     </div>                                      
