@@ -48,7 +48,8 @@ $perfil = $user['Perfil'];
         <a href="http://localhost/locadora/dashboard.php?p=categorias.php" class="list-group-item list-group-item-action bg-light">Categorias</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Relatórios</a>
       <?php } else { ?>
-        <a href="#" class="list-group-item list-group-item-action bg-light">AREA CLIENTE</a>
+        <a href="http://localhost/locadora/dashboard.php?p=reserva.php" class="list-group-item list-group-item-action bg-light">Reserva</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Editar Perfil</a>
       <?php } ?>  
       </div>
 

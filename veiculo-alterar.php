@@ -81,6 +81,20 @@ $categoriaV = $categoriaVeiculo->fetch(PDO::FETCH_ASSOC);
                     <div class="row">
                         <div class="col-md-4 col-sm-12 col-md-offset-2">
                             <div>
+                                <label>Ano:</label>
+                                <input type="text" name="ano" value="<?php echo $veiculo['ano']; ?>" class="form-control" required/>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                            <div>
+                                <label>Quantidade:</label>
+                                <input type="text" name="quantidade" value="<?php echo $veiculo['quantidade']; ?>" class="form-control" required/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12 col-md-offset-2">
+                            <div>
                                 <label>Categoria:</label><?php $categoria = $veiculo['id_categoria']; ?>
                                 <select name="id_categoria" class="form-control" value="<?php echo $veiculo['id_categoria']; ?>">
                                 <option value="">Selecione a Categoria</option>
