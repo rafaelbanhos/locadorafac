@@ -9,12 +9,12 @@ $stmt = $pdo->prepare('SELECT * FROM tb_veiculo WHERE id_veiculo = :id_veiculo')
 $stmt->bindParam(':id_veiculo', $idVeiculo);   
 $stmt->execute();
 $veiculo = $stmt->fetch(PDO::FETCH_ASSOC);
-//COnsulta todas as cagtegorias
+//Consulta todas as categorias
 $categoriasstmt = $pdo->prepare("SELECT * FROM tb_categoria");
 $categoriasstmt->execute();
 $categorias = $categoriasstmt->fetchAll(PDO::FETCH_ASSOC);
 
-//COnsulta Categoria Associada ao Veiculo
+//Consulta Categoria Associada ao Veiculo
 $categoriaVeiculo = $pdo->prepare("SELECT * FROM tb_categoria WHERE id_categoria = :idCategoria");
 $categoriaVeiculo->bindParam(':idCategoria', $veiculo['id_categoria']);
 $categoriaVeiculo->execute();
