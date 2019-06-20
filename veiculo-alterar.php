@@ -9,6 +9,18 @@ $stmt = $pdo->prepare('SELECT * FROM tb_veiculo WHERE id_veiculo = :id_veiculo')
 $stmt->bindParam(':id_veiculo', $idVeiculo);   
 $stmt->execute();
 $veiculo = $stmt->fetch(PDO::FETCH_ASSOC);
+//COnsulta todas as cagtegorias
+$categoriasstmt = $pdo->prepare("SELECT * FROM tb_categoria");
+$categoriasstmt->execute();
+$categorias = $categoriasstmt->fetchAll(PDO::FETCH_ASSOC);
+
+//COnsulta Categoria Associada ao Veiculo
+$categoriaVeiculo = $pdo->prepare("SELECT * FROM tb_categoria WHERE id_categoria = :idCategoria");
+$categoriaVeiculo->bindParam(':idCategoria', $veiculo['id_categoria']);
+$categoriaVeiculo->execute();
+$categoriaV = $categoriaVeiculo->fetch(PDO::FETCH_ASSOC);
+
+
 ?>
 
 <!DOCTYPE html>
@@ -71,11 +83,11 @@ $veiculo = $stmt->fetch(PDO::FETCH_ASSOC);
                             <div>
                                 <label>Categoria:</label><?php $categoria = $veiculo['id_categoria']; ?>
                                 <select name="id_categoria" class="form-control" value="<?php echo $veiculo['id_categoria']; ?>">
-                                    <option value="1" <?=($categoria == "1")?'selected':''?>>Economico</option>
-                                    <option value="2" <?=($categoria == "2")?'selected':''?>>Compacto</option>
-                                    <option value="3" <?=($categoria == "3")?'selected':''?>>Utilitario</option>
-                                    <option value="4" <?=($categoria == "4")?'selected':''?>>Full-Size</option>
-                                    <option value="5" <?=($categoria == "5")?'selected':''?>>Luxo</option>
+                                <option value="">Selecione a Categoria</option>
+                                <option value="<?php echo $categoriaV['id_categoria']; ?>" selected><?php echo $categoriaV['descricao']; ?></option>
+                                <?php foreach($categorias as $c){ ?>
+                                    <option value="<?php echo $c['id_categoria']; ?>"><?php echo $c['descricao'] ?></option>
+                                <?php } ?>
                                 </select>
                             </div>
                         </div>

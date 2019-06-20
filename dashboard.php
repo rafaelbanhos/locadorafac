@@ -42,7 +42,8 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
       <div class="list-group list-group-flush">
         <a href="http://localhost/locadora/dashboard.php?p=usuarios.php" class="list-group-item list-group-item-action bg-light">Usuários</a>
         <a href="http://localhost/locadora/dashboard.php?p=veiculos.php" class="list-group-item list-group-item-action bg-light">Veículos</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Teste</a>
+        <a href="http://localhost/locadora/dashboard.php?p=reserva.php" class="list-group-item list-group-item-action bg-light">Reserva</a>
+        <a href="http://localhost/locadora/dashboard.php?p=categorias.php" class="list-group-item list-group-item-action bg-light">Categorias</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Relatórios</a>
       </div>
 

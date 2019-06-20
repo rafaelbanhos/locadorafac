@@ -54,9 +54,9 @@ $lista = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                             <td><?php echo $linha['status'] ?></td>
                             <td>
-                                <a href="usuario-alterar.php?id_usuario=<?php echo $linha['id_usuario'] ?>"
+                                <a href="dashboard.php?p=usuario-alterar.php&id_usuario=<?php echo $linha['id_usuario'] ?>"
                                     class="btn btn-xs btn-info"><span class="glyphicon glyphicon-cog"></span></a>
-                                <a href="inc/excluir-usuario.php?id_usuario=<?php echo $linha['id_usuario']?>"
+                                <a href="inc/excluir-usuario.php?id_usuari  =<?php echo $linha['id_usuario']?>"
                                     class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
                             </td>
                         </tr>

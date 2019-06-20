@@ -1,12 +1,11 @@
 <?php 
-include('dashboard.php');
+//include('dashboard.php');
 require_once('inc/conexao.php');
 
 $idUsuario = $_GET["id_usuario"];
 
 $pdo=Database::conexao();
-$stmt = $pdo->prepare('SELECT * FROM tb_usuario WHERE id_usuario = :id_usuario
-  ');
+$stmt = $pdo->prepare('SELECT * FROM tb_usuario WHERE id_usuario = :id_usuario');
 $stmt->bindParam(':id_usuario', $idUsuario);   
 $stmt->execute();
 $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -43,7 +42,7 @@ $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
                         <div class="col-md-5 col-sm-12 col-md-offset-1">
                             <div>
                                 <label>Login:</label>
-                                <input type="text" name="login" class="form-control" required/>
+                                <input type="text" name="login" value="<?php echo $usuario['login']; ?>" class="form-control" required/>
                             </div>
                         </div>
                         <div class="col-md-5 col-sm-12">

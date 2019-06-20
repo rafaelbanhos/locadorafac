@@ -55,7 +55,7 @@ $lista = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             <td><?php echo $linha['id_categoria'] ?></td>
                             <td><?php echo $linha['situacao'] ?></td>
                             <td>
-                                <a href="veiculo-alterar.php?id_veiculo=<?php echo $linha['id_veiculo'] ?>"
+                                <a href="dashboard.php?p=veiculo-alterar.php&id_veiculo=<?php echo $linha['id_veiculo'] ?>"
                                     class="btn btn-xs btn-info"><span class="glyphicon glyphicon-cog"></span></a>
                                 <a href="inc/excluir-veiculo.php?id_veiculo=<?php echo $linha['id_veiculo']?>"
                                     class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-trash"></span></a>

@@ -1,12 +1,5 @@
 <?php 
 //include('dashboard.php');
-
-
-$pdo = Database::conexao();
-$stmt = $pdo->prepare("SELECT * FROM tb_categoria");
-$stmt->execute();
-$categorias = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
 ?>
 
 <!DOCTYPE html>
@@ -32,58 +25,39 @@ $categorias = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <!-- Page Heading -->
         <div class="row content-center">
             <div class="col-md-7 col-sm-12 col-md-offset-4">
-                <h1>Cadastrar Veiculo</h1>
+                <h1>Cadastrar Categoria</h1>
                 <hr>
         
-                <form method="POST" action="inc/cadastrar-veiculo.php">
+                <form method="POST" action="inc/cadastrar-categoria.php">
                     <div class="row">
                         <div class="col-md-4 col-sm-12 col-md-offset-2">
                             <div>
-                                <label>Placa:</label>
-                                <input type="text" name="placa" class="form-control" maxlength="7" required/>
+                                <label>Dscriçao da Categoria:</label>
+                                <input type="text" name="descricao" class="form-control" maxlength="7" required/>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-12">
                             <div>
-                                <label>Modelo:</label>
-                                <input type="text" name="modelo" class="form-control" required/>
+                                <label>Valor:</label>
+                                <input type="text" name="valor" class="form-control" required/>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4 col-sm-12 col-md-offset-2">
                             <div>
-                                <label>Marca:</label>
-                                <input type="text" name="marca" class="form-control" required/>
+                                <label>status:</label>
+                                <select name="status" id="" class="form-control">
+                                    <option value="">Selecione</option>
+                                    <option value="1">Disponível</option>
+                                    <option value="2">Indiponível</option>
+                                    <option value="3">Manutenção</option>
+                                </select>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-12">
-                            <div>
-                                <label>Cor:</label>
-                                <input type="text" name="cor" class="form-control" required/>
-                            </div>
-                        </div>
+                    
                     </div>
                     <div class="row">
-                        <div class="col-md-4 col-sm-12 col-md-offset-2">
-                            <div>
-                                <label>Categoria:</label>
-                                <select name="categoria" class="form-control">
-                                <option value="">Selecione a Categoria</option>
-                                <?php foreach($categorias as $c){ ?>
-                                    <option value="<?php echo $c['id_categoria']; ?>"><?php echo $c['descricao'] ?></option>
-                                <?php } ?>
-                                
-                            </select>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-12">
-                            <label>Status:</label>
-                            <select name="status" class="form-control">
-                                <option value="H" selected>Habilitado</option>
-                                <option value="D">Desabilitado</option>
-                            </select>
-                        </div>
                         <div class="col-md-4 botao col-md-offset-2">
                             <label></label>
                             <input type="submit" name="cadastrar" class="btn btn-success btn-block" value="Cadastrar"/>
