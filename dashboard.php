@@ -10,6 +10,7 @@ $pdo = Database::conexao();
 $stmt = $pdo->prepare("SELECT * FROM tb_usuario WHERE id_usuario=:id_usuario");
 $stmt->execute(['id_usuario' => $_SESSION['id_usuario']]);
 $user = $stmt->fetch(PDO::FETCH_ASSOC);
+$perfil = $user['Perfil'];
 
 
 ?>
@@ -40,11 +41,15 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
       <div class="sidebar-heading">Olá, <?php echo $_SESSION['nome'] ?> <a href="inc/logout.php"><i class="fa fa-times-circle-o fa-lg"></a></i></div>
       <div class="list-group list-group-flush">
+      <?php   if($perfil == 3){ ?>
         <a href="http://localhost/locadora/dashboard.php?p=usuarios.php" class="list-group-item list-group-item-action bg-light">Usuários</a>
         <a href="http://localhost/locadora/dashboard.php?p=veiculos.php" class="list-group-item list-group-item-action bg-light">Veículos</a>
         <a href="http://localhost/locadora/dashboard.php?p=reserva.php" class="list-group-item list-group-item-action bg-light">Reserva</a>
         <a href="http://localhost/locadora/dashboard.php?p=categorias.php" class="list-group-item list-group-item-action bg-light">Categorias</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Relatórios</a>
+      <?php } else { ?>
+        <a href="#" class="list-group-item list-group-item-action bg-light">AREA CLIENTE</a>
+      <?php } ?>  
       </div>
 
     </div>
