@@ -6,6 +6,8 @@ $placa = $_POST["placa"];
 $modelo = $_POST["modelo"];
 $marca = $_POST["marca"];
 $cor = $_POST["cor"];
+$ano = $_POST["ano"];
+$quantidade = $_POST["quantidade"];
 $status = $_POST["status"];
 $categoria = $_POST["categoria"];
 
@@ -31,7 +33,7 @@ if($rows>=1){
 } else {
     try {
         
-        $stmt = $pdo->prepare('INSERT INTO tb_veiculo (id_categoria,placa,modelo,marca,cor,situacao) VALUES (:id_categoria, :placa, :modelo, :marca, :cor, :situacao)');
+        $stmt = $pdo->prepare('INSERT INTO tb_veiculo (id_categoria,placa,modelo,marca,cor,situacao,ano,quantidade) VALUES (:id_categoria, :placa, :modelo, :marca, :cor, :situacao, :ano, :quantidade)');
         $stmt->execute(array(
             ':id_categoria' => $categoria,
             ':placa' => $placa,
@@ -39,6 +41,8 @@ if($rows>=1){
             ':marca' => $marca,
             ':cor' => $cor,
             ':situacao' => $status,
+            ':ano' => $ano,
+            ':quantidade' => $quantidade,
             
         ));
 

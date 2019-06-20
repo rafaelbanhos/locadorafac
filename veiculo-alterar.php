@@ -104,7 +104,7 @@ $categoriaV = $categoriaVeiculo->fetch(PDO::FETCH_ASSOC);
                         </div>
                         <div class="col-md-4 botao">
                             <label></label>
-                            <a href="veiculos.php" role="button" class="btn btn-warning btn-block">Cancelar</a>
+                            <a href="http://localhost/locadora/dashboard.php?p=veiculos.php" role="button" class="btn btn-warning btn-block">Cancelar</a>
                         </div>
                     </div>
                 </form>

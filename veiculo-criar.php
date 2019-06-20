@@ -67,6 +67,20 @@ $categorias = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <div class="row">
                         <div class="col-md-4 col-sm-12 col-md-offset-2">
                             <div>
+                                <label>Ano:</label>
+                                <input type="text" name="ano" class="form-control" required/>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                            <div>
+                                <label>Quantidade:</label>
+                                <input type="text" name="quantidade" class="form-control" required/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12 col-md-offset-2">
+                            <div>
                                 <label>Categoria:</label>
                                 <select name="categoria" class="form-control">
                                 <option value="">Selecione a Categoria</option>

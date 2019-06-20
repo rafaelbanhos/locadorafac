@@ -15,7 +15,7 @@ try{
     $stmt->execute();
 
     $mensagem = 'Alteração realizada com sucesso!';
-    $location = '../usuarios.php';
+    $location = 'http://localhost/locadora/dashboard.php?p=usuarios.php';
 
     // criar e exibir o javascript
     echo '<script>';
