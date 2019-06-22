@@ -18,13 +18,13 @@ $verifica = $pdo->prepare('SELECT * FROM tb_usuario WHERE login = :login');
 $verifica->bindValue(":login", $_POST['login']);
 $verifica->execute();
 
-//conta o numero de registros obtidos
+//Verifica o numero de registros obtidos
 $rows = $verifica->rowCount();
 if($rows>=1){
     $mensagem = 'Já possui usuário com esse login, tente outro!';
     $location = '../cadastro.php';
 
-    // criar e exibir o javascript
+    // Cria e exibi o Javascript
     echo '<script>';
         printf("alert('%s');\n", $mensagem);
         if (!empty($location)) {
@@ -48,7 +48,7 @@ if($rows>=1){
         $mensagem = 'Usuário cadastrado com sucesso!';
         $location = '../index.php';
 
-        // criar e exibir o javascript
+        // Cria e exibi o Javascript
         echo '<script>';
             printf("alert('%s');\n", $mensagem);
             if (!empty($location)) {

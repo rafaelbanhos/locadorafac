@@ -46,7 +46,7 @@ $categoriaV = $categoriaVeiculo->fetch(PDO::FETCH_ASSOC);
                 <h1>Reservar Veiculo</h1>
                 <hr>
                 <form method="GET" action="inc/reservar.php">
-                    <input type="hidden" name="id_veiculo" value="<?php echo $veiculo['id_veiculo']; ?>">
+                    <input type="hidden" name="id_veiculo_reserva" value="<?php echo $veiculo['id_veiculo']; ?>">
                     <div class="row">
                         <div class="col-md-3 col-sm-12 col-md-offset-1">
                             <div>

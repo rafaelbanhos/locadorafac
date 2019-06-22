@@ -5,7 +5,7 @@ session_start();
 
 $status = "R";
 $id_usuario = $_SESSION['id_usuario'];
-$id_veiculo = $_GET['id_veiculo'];
+$id_veiculo = $_SESSION['id_veiculo'];
 
 $data_inicio = $_GET['data_inicio'];
 $data_fim = $_GET['data_fim'];
@@ -25,9 +25,10 @@ $valor_reserva = $valorDiaria * $dias;
 
 try{
     $pdo=Database::conexao();
-    $stmt = $pdo->prepare('INSERT INTO tb_reserva (id_usuario, data_inicio, data_fim, data_solicitacao, data_checkin, data_ckeckout, valor_reserva, valor_pago, status) VALUES (:id_usuario, :data_inicio, :data_fim, :data_solicitacao, :data_checkin, :data_ckeckout, :valor_reserva, :valor_pago, :status)');
+    $stmt = $pdo->prepare('INSERT INTO tb_reserva (id_usuario, id_veiculo, data_inicio, data_fim, data_solicitacao, data_checkin, data_ckeckout, valor_reserva, valor_pago, status) VALUES (:id_usuario, :id_veiculo, :data_inicio, :data_fim, :data_solicitacao, :data_checkin, :data_ckeckout, :valor_reserva, :valor_pago, :status)');
     $stmt->execute(array(
         ':id_usuario' => $_SESSION["id_usuario"],
+        ':id_veiculo' => $id_veiculo,
         ':data_inicio' => $data_inicio,
         ':data_fim' => $data_fim,
         ':data_solicitacao' => $data_solicitacao,
@@ -40,7 +41,7 @@ try{
     ));
 
     // $pdo=Database::conexao();
-    // $att = $pdo->prepare('UPDATE tb_veiculo SET status = :status WHERE id_veiculo = :id_veiculo');
+    // $att = $pdo->prepare('UPDATE tb_veiculo SET situacao = :status WHERE id_veiculo = :id_veiculo');
     // $att->bindParam(':id_veiculo', $id_veiculo);  
     // $att->bindParam(':status', $status); 
     // $att->execute();
