@@ -88,9 +88,10 @@ $perfil = $user['Perfil'];
 --><?php if (isset($_GET['p'])) {
       include($_GET['p']);
     } else {
-      echo "<h1 class='mt-4'>Página em construção</h1>
-          <p>Locadora RMGD. Em construção.</p>
-          <p>Desculpe o incômodo, voltaremos em breve!</p>";
+      echo "<h1 class='mt-3'>Locadora RMGD</h1>
+          <br/> 
+          <h3>Seja Bem-Vindo!</h3>
+          <h3>Venha fazer sua locação de veículos no melhor site do Brasil.</h3>";
     }
     ?>
       </div>
