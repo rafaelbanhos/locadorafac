@@ -89,7 +89,7 @@ $perfil = $user['Perfil'];
       include($_GET['p']);
     } else {
       echo "<h1 class='mt-4'>Sistema Locadora de Carros</h1>
-          <h4>Trabalho Programação para Internet.</h4>
+          <h4>Trabalho Programação para Internet - Andre Wescley</h4>
           <p>Equipe: <br>George Paiva<br> Marcelo Bastos<br> Rafael Banhos<br> Leonardo<br> Dácio</p>";
     }
     ?>
