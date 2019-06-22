@@ -1,5 +1,11 @@
 <?php 
 //include('dashboard.php');
+
+$pdo = Database::conexao();
+$stmt = $pdo->prepare("SELECT * FROM tb_perfil_usuario");
+$stmt->execute();
+$idperfilusuario = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 <!DOCTYPE html>
@@ -75,8 +81,13 @@
                             <div>
                                 <label>Perfil:</label>
                                 <select name="id_perfil_usuario" class="form-control">                                
-                                <option value="3" selected>Funcionario</option>
-                                <option value="1">Cliente</option>
+                                <!-- <option value="3" selected>Funcionario</option>
+                                <option value="1">Cliente</option> -->
+                                <option value="">Selecione a Categoria</option>
+                                <?php foreach($idperfilusuario as $c){ ?>
+                                    <option value="<?php echo $c['id_perfil_usuario']; ?>"><?php echo $c['descricao'] ?></option>
+                                <?php } ?>
+
                             </select>
                             </div>
                         </div>
