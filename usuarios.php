@@ -22,7 +22,7 @@ $lista = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <div class="container-fluid">
         <!-- Page Heading -->
         <div class="row">
-            <div class="col-md-8 col-sm-12 col-md-offset-3">
+            <div class="col-md-8 col-sm-12 col-md-offset-2">
                 <h1>Usuários</h1>
                 <hr>
             </div>
@@ -31,7 +31,7 @@ $lista = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
         <div class="row">
-            <div class="col-md-8 col-sm-12 col-md-offset-3">
+            <div class="col-md-8 col-sm-12 col-md-offset-2">
                 <table class="table table-hover">
                     <thead>
                         <tr>
@@ -67,7 +67,7 @@ $lista = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
     </div>
     <div class="row">
-        <div class=" col-md-3 col-sm-12 col-md-offset-3">
+        <div class=" col-md-3 col-sm-12 col-md-offset-2">
             <a href="http://localhost/locadora/dashboard.php?p=usuario-criar.php" class="btn btn-info btn-block" id="insert">Cadastrar Usuário</a>
         </div>
     </div>

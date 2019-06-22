@@ -24,15 +24,15 @@
     <div class="container-fluid">
         <!-- Page Heading -->
         <div class="row content-center">
-            <div class="col-md-7 col-sm-12 col-md-offset-4">
+            <div class="col-md-7 col-sm-12 col-md-offset-2">
                 <h1>Cadastrar Categoria</h1>
                 <hr>
         
                 <form method="POST" action="inc/cadastrar-categoria.php">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-12 col-md-offset-2">
+                    <div class="row col-md-4 col-sm-12 col-md-offset-2">
+                        <div class>
                             <div>
-                                <label>Dscriçao da Categoria:</label>
+                                <label>Descriçao da Categoria:</label>
                                 <input type="text" name="descricao" class="form-control" maxlength="7" required/>
                             </div>
                         </div>
@@ -43,8 +43,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-4 col-sm-12 col-md-offset-2">
+                    <div class="row col-md-4 col-sm-12 col-md-offset-2">
+                        <div class>
                             <div>
                                 <label>status:</label>
                                 <select name="status" id="" class="form-control">

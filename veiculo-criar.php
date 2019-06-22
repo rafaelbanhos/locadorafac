@@ -31,7 +31,7 @@ $categorias = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <div class="container-fluid">
         <!-- Page Heading -->
         <div class="row content-center">
-            <div class="col-md-7 col-sm-12 col-md-offset-4">
+            <div class="col-md-7 col-sm-12 col-md-offset-2">
                 <h1>Cadastrar Veiculo</h1>
                 <hr>
         

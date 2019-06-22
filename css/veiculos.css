@@ -1,0 +1,22 @@
+h1{
+    margin: 10px 0px 10px 0px;
+}
+
+#insert{
+    margin: 0px 0px 10px 0px;
+}
+
+@media (max-width: 575.98px) {
+    h1 {
+        font-size: 30px;
+        text-align: center;
+      }
+  
+      div table.table.table-hover{
+          font-size: 5px;
+      }
+  
+      span{
+          font-size: 10px;
+      }
+}

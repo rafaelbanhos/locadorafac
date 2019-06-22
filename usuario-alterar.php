@@ -38,7 +38,7 @@ $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
                 <hr>
 
                 <form method="POST" action="inc/alterar-usuario.php?id_usuario=<?php echo $idUsuario?>">
-                    <<div class="row">
+                    <div class="row">
                         <div class="col-md-5 col-sm-12 col-md-offset-1">
                             <div>
                                 <label>Login:</label>

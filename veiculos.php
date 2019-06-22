@@ -13,7 +13,7 @@ $lista = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <head>
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" media="screen" href="css/veiculos.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/veiculos.css"/>
 
 </head>
 
@@ -21,7 +21,7 @@ $lista = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <div class="container-fluid">
         <!-- Page Heading -->
         <div class="row">
-            <div class="col-md-7 col-sm-12 col-md-offset-4">
+            <div class="col-md-7 col-sm-12 col-md-offset-2">
                 <h1>Veiculos</h1>
                 <hr>
             </div>
@@ -30,7 +30,7 @@ $lista = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
         <div class="row">
-            <div class="col-md-7 col-md-offset-4">
+            <div class="col-md-7 col-md-offset-2">
                 <table class="table table-hover">
                     <thead>
                         <tr>
@@ -41,6 +41,7 @@ $lista = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             <th>Cor</th>
                             <th>Categoria</th>
                             <th>Status</th>
+                            <th>Alterar/Apagar</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -68,7 +69,7 @@ $lista = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
     </div>
     <div class="row">
-        <div class=" col-md-3 col-sm-12 col-md-offset-4">
+        <div class=" col-md-3 col-sm-12 col-md-offset-2">
             <a href="http://localhost/locadora/dashboard.php?p=veiculo-criar.php" class="btn btn-info btn-block" id="insert">Cadastrar Veiculo</a>
         </div>
     </div>
