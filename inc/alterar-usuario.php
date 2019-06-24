@@ -3,8 +3,10 @@ require_once('conexao.php');
 
 try{
     $pdo=Database::conexao();
-    $stmt = $pdo->prepare('UPDATE tb_usuario SET nome = :nome, cpf = :cpf, email = :email, status=:status , perfil =:perfil WHERE id_usuario = :id_usuario');
+    $stmt = $pdo->prepare('UPDATE tb_usuario SET login = :login, senha = :senha, nome = :nome, cpf = :cpf, email = :email, status=:status , perfil =:perfil WHERE id_usuario = :id_usuario');
     $stmt->bindParam(':id_usuario', $_GET["id_usuario"]);
+    $stmt->bindParam(':login', $_POST['login']);
+    $stmt->bindParam(':senha', $_POST['senha']);
     $stmt->bindParam(':nome', $_POST['nome']);   
     $stmt->bindParam(':cpf', $_POST['cpf']);
     $stmt->bindParam(':email', $_POST['email']);   
