@@ -88,9 +88,9 @@ $perfil = $user['Perfil'];
 --><?php if (isset($_GET['p'])) {
       include($_GET['p']);
     } else {
-      echo "<h1 class='mt-4'>Sistema Locadora de Carros</h1>
-          <h4>Trabalho Programação para Internet - Andre Wescley</h4>
-          <p>Equipe: <br>George Paiva<br> Marcelo Bastos<br> Rafael Banhos<br> Leonardo<br> Dácio</p>";
+      echo "<h1 class='col-md-8 col-sm-12 col-md-offset-1'>Sistema Locadora de Carros</h1>
+          <h4 class='col-md-8 col-sm-12 col-md-offset-1'>Trabalho Programação para Internet - Prof. Andre Wescley</h4>
+          <p class='col-md-8 col-sm-12 col-md-offset-1'>Equipe: <br>- George Paiva<br> - Marcelo Bastos<br> - Rafael Banhos<br> - Leonardo<br> - Dácio</p>";
     }
     ?>
       </div>

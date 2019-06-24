@@ -31,7 +31,7 @@ session_start();
     <nav class=" navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">RMGD LocaCar</a>
+                <a class="navbar-brand" href="#">RMGDL LocaCar</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
                 <li>
