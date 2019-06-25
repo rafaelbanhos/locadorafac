@@ -11,5 +11,5 @@ Sistema Web para locadora de carros(PHP) - Trabalho da faculdade
 - Relatório de reservas
 
 -----------------------------
-By Rafael Banhos 
+By Rafael Banhos | 
 Email: rafaelbanhos@gmail.com
